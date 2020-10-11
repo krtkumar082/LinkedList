@@ -19,6 +19,18 @@ public class MyLinkedList {
 			this.head=node;
 		}
 	}
+	
+	public void addAtEnd(Node node) {
+		if(head==null) {
+			this.head=node;
+			this.tail=node;
+		}
+		else {
+			tail.setNext(node);
+			tail=tail.getNext();
+		}
+	}
+	
 	public void printList() {
 		if(this.head!=null) {
 			INode temp=head;
