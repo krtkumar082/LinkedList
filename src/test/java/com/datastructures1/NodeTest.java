@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class NodeTest {
 	@Test
-	public void given3NumberWhenAddedToLinkedListShouldBeAddedToTop() {
+	public void given3NumberWhenLinkedListShouldPass() {
 		Node<Integer> firstNode = new Node<Integer>(70);
 		Node<Integer> secondNode = new Node<Integer>(30);
 		Node<Integer> thirdNode = new Node<Integer>(56);
