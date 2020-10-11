@@ -50,6 +50,16 @@ public class MyLinkedList {
 		
 	}
 	
+	public INode pop() {
+		if(head==null) {
+			return null;
+		}
+		INode temp=head;
+		head=head.getNext();
+		temp.setNext(null);
+		return temp;
+	}
+	
 	public int lenList() {
 		if(this.head!=null) {
 			INode temp=head;
@@ -72,6 +82,7 @@ public class MyLinkedList {
 				System.out.print(temp.getKey()+ "->");
 				temp=temp.getNext();
 			}
+			System.out.println(" ");
 		}
 	}
 	
