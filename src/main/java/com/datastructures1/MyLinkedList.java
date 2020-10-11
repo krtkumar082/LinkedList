@@ -60,6 +60,20 @@ public class MyLinkedList {
 		return temp;
 	}
 	
+	public INode popLast() {
+		if(head==null)
+			return null;
+		INode temp=head;
+		while(temp.getNext()!=tail) {
+			temp=temp.getNext();
+		}
+		INode temp1=temp.getNext();
+		tail=temp;
+		tail.setNext(null);
+		return temp1;
+		
+	}
+	
 	public int lenList() {
 		if(this.head!=null) {
 			INode temp=head;
