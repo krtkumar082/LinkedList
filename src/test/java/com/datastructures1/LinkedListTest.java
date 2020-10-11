@@ -55,4 +55,19 @@ public class LinkedListTest {
 		list.printList();
 		Assert.assertEquals(firstNode,pop );
 	}
+	
+	@Test
+	public void given3NumberWhenAddedToLinkedListShouldBeDeletedAtEnd() {
+		Node<Integer> firstNode = new Node<Integer>(56);
+		Node<Integer> secondNode = new Node<Integer>(30);
+		Node<Integer> thirdNode = new Node<Integer>(70);
+		MyLinkedList list = new MyLinkedList();
+		list.addAtEnd(firstNode);
+		list.addAtEnd(secondNode);
+		list.addAtEnd(thirdNode);
+		list.printList();
+		INode pop=list.popLast();
+		list.printList();
+		Assert.assertEquals(thirdNode,pop );
+	}
 }
