@@ -26,4 +26,16 @@ public class LinkedListTest {
 		list.addAtEnd(thirdNode);
 		list.printList();
 	}
+	
+	@Test
+	public void given3NumberWhenAddedToLinkedListShouldBeAddedAtMiddle() {
+		Node<Integer> firstNode = new Node<Integer>(56);
+		Node<Integer> secondNode = new Node<Integer>(30);
+		Node<Integer> thirdNode = new Node<Integer>(70);
+		MyLinkedList list = new MyLinkedList();
+		list.addAtEnd(firstNode);	
+		list.addAtEnd(thirdNode);
+		list.insertAtMiddle(secondNode);
+		list.printList();
+	}
 }
