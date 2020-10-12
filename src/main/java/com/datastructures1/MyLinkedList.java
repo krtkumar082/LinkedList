@@ -88,6 +88,16 @@ public class MyLinkedList<K> {
 		 return null;
 		 
 	}
+	
+	public void insert(Node node,int key) {
+		if(head==null)
+			return;
+		INode temp=search(key);
+		INode temp1=temp.getNext();
+		temp.setNext(node);
+		node.setNext(temp1);
+	}
+	
 	public int lenList() {
 		if(this.head!=null) {
 			INode temp=head;
