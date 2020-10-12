@@ -70,4 +70,19 @@ public class LinkedListTest {
 		list.printList();
 		Assert.assertEquals(thirdNode,pop );
 	}
+	
+	@Test
+	public void given3NumberWhenAddedToLinkedListShouldBeReturnKeyValue() {
+		Node<Integer> firstNode = new Node<Integer>(56);
+		Node<Integer> secondNode = new Node<Integer>(30);
+		Node<Integer> thirdNode = new Node<Integer>(70);
+		MyLinkedList list = new MyLinkedList();
+		list.addAtEnd(firstNode);
+		list.addAtEnd(secondNode);
+		list.addAtEnd(thirdNode);
+		list.printList();
+		INode temp=list.search(30);
+		
+		Assert.assertEquals(30,temp.getKey() );
+	}
 }
