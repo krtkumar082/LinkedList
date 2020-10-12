@@ -1,6 +1,6 @@
 package com.datastructures1;
 
-public class MyLinkedList {
+public class MyLinkedList<K> {
 	public INode head;
 	public INode tail;
 	
@@ -74,6 +74,20 @@ public class MyLinkedList {
 		
 	}
 	
+	public <K> INode search(K key) {
+		 if(head==null)
+			 return null;
+		 INode temp=head;
+		 while(temp!=null ) {
+			 if(temp.getKey().equals(key)) {
+				 System.out.println("element is found");
+				 return temp;
+			 }
+			 temp=temp.getNext();
+		 }
+		 return null;
+		 
+	}
 	public int lenList() {
 		if(this.head!=null) {
 			INode temp=head;
