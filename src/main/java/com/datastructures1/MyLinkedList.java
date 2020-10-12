@@ -98,6 +98,30 @@ public class MyLinkedList<K> {
 		node.setNext(temp1);
 	}
 	
+	public void deleteAnode(int key) {
+		if(head==null)
+			return;
+		if(head.getKey().equals(key)) {
+			pop();
+		return;
+		}
+		if(tail.getKey().equals(key)) {
+			popLast();
+		return;
+		}
+		INode temp=head;
+		while(temp!=null) {
+			if(temp.getNext().getKey().equals(key)) {
+				temp.setNext(temp.getNext().getNext());
+				return;
+			}
+			temp=temp.getNext();
+		}
+		
+		
+	}	
+	
+	
 	public int lenList() {
 		if(this.head!=null) {
 			INode temp=head;
