@@ -104,4 +104,29 @@ public class LinkedListTest {
 		boolean result=first.equals(second);
 		Assert.assertEquals(true,result );
 	}
+ 
+	@Test
+	public void given3NumberWhenAddedToLinkedListShouldBeDeleteNodeAfterGiven() {
+		Node<Integer> firstNode = new Node<Integer>(56);
+		Node<Integer> secondNode = new Node<Integer>(30);
+		Node<Integer> thirdNode = new Node<Integer>(70);
+		Node<Integer> newNode = new Node<Integer>(40);
+		MyLinkedList list = new MyLinkedList();
+		list.addAtEnd(firstNode);
+		list.addAtEnd(secondNode);
+		list.addAtEnd(thirdNode);
+		list.printList();
+		
+		list.insert(newNode, 30);
+		list.printList();
+		//Integer i=list.lenList();
+		INode<Integer> first=newNode.getNext();
+		list.deleteAnode(40);
+		list.printList();
+		INode<Integer> second=secondNode.getNext();
+		//Integer j=list.lenList();
+		//boolean result= (i-1)==(j);
+		boolean result=first.equals(second);
+		Assert.assertEquals(true,result );
+	}
 }
