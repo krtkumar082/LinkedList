@@ -11,6 +11,10 @@ public class MyQueue {
 		myLinkedList.addAtEnd(node);
 	}
 
+	public void dequeue() {
+		myLinkedList.pop();
+	}
+	
 	public void print() {
 		myLinkedList.printList();
 	}
