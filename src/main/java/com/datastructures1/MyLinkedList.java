@@ -9,7 +9,7 @@ public class MyLinkedList<K> {
 		this.tail=null;
 	}
 	
-	public void addAtFront(Node node) {
+	public void addAtFront(INode<K> node) {
 		if(head==null) {
 			this.head=node;
 			this.tail=node;
@@ -20,7 +20,7 @@ public class MyLinkedList<K> {
 		}
 	}
 	
-	public void addAtEnd(Node node) {
+	public void addAtEnd(INode<K> node) {
 		if(head==null) {
 			this.head=node;
 			this.tail=node;
@@ -31,7 +31,7 @@ public class MyLinkedList<K> {
 		}
 	}
 	 
-	public void insertAtMiddle(Node node) {
+	public void insertAtMiddle(INode<K> node) {
 		if(head==null) {
 			this.head=node;
 			this.tail=node;
@@ -50,7 +50,7 @@ public class MyLinkedList<K> {
 		
 	}
 	
-	public INode pop() {
+	public INode<K> pop() {
 		if(head==null) {
 			return null;
 		}
