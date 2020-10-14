@@ -14,6 +14,14 @@ public class MyStack {
 	public void print() {
 		myLinkedList.printList();
 	}
+	
+	public INode peek() {
+		return myLinkedList.head;
+	}
+
+	public INode pop() {
+		return myLinkedList.pop();
+	}
 
 	public static void main(String[] args) {
 
